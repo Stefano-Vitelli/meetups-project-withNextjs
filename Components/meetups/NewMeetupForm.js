@@ -44,13 +44,13 @@ const NewMeetupForm = (props) => {
         <div className={classes.control}>
           <label htmlFor="description"> Description </label>
           <textarea
-            id={description}
+            id='description'
             required
             rows="5"
             ref={descriptionInputRef}
           />
         </div>
-        <div className={classes.action}>
+        <div className={classes.actions}>
           <button> Add Meetup </button>
         </div>
       </form>
