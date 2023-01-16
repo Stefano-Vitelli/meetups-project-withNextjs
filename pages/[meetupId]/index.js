@@ -19,11 +19,9 @@ const MeetupDetails = (props) => {
     </Fragment>
   );
 };
-console.log(process.env.NEXT_PUBLIC_DB_URL)
+console.log(process.env.NEXT_PUBLIC_DB_URL);
 export async function getStaticPaths() {
-  const client = await MongoClient.connect(
-    process.env.NEXT_PUBLIC_DB_URL
-  );
+  const client = await MongoClient.connect(process.env.NEXT_PUBLIC_DB_URL);
 
   const db = client.db();
 
@@ -34,7 +32,7 @@ export async function getStaticPaths() {
   client.close();
 
   return {
-    fallback: 'blocking',
+    fallback: "blocking",
     paths: meetups.map((meetup) => ({
       params: { meetupId: meetup._id.toString() },
     })),
@@ -43,9 +41,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(context) {
   const meetupId = context.params.meetupId;
-  const client = await MongoClient.connect(
-    process.env.NEXT_PUBLIC_DB_URL
-  );
+  const client = await MongoClient.connect(process.env.NEXT_PUBLIC_DB_URL);
 
   const db = client.db();
 
