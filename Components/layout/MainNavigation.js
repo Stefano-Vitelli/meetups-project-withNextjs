@@ -11,8 +11,9 @@ const MainNavigation = () => {
             <Link href="/"> My trips </Link>
           </li>
           <li>
-            <Link href="/new-meetup"> What's next? </Link>
+            <Link href="/new-meetup"> Add a destiny </Link>
           </li>
+          
         </ul>
       </nav>
     </header>
