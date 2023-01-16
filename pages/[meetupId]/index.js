@@ -44,7 +44,7 @@ export async function getStaticPaths() {
 export async function getStaticProps(context) {
   const meetupId = context.params.meetupId;
   const client = await MongoClient.connect(
-    "mongodb+srv://Stefano:Stefyamaha1706.@cluster0.uijsj75.mongodb.net/meetups?retryWrites=true&w=majority"
+    NEXT_PUBLIC_DB_URL
   );
 
   const db = client.db();
