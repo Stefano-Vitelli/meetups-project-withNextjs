@@ -4,14 +4,14 @@ import Link from "next/link";
 const MainNavigation = () => {
   return (
     <header className={classes.header}>
-      <div className={classes.logo}> React Meetups </div>
+      <div className={classes.logo}>  </div>
       <nav>
         <ul>
           <li>
-            <Link href="/"> All Meetups</Link>
+            <Link href="/"> My trips </Link>
           </li>
           <li>
-            <Link href="/new-meetup"> Add New Meetup </Link>
+            <Link href="/new-meetup"> Where have you been? </Link>
           </li>
         </ul>
       </nav>
