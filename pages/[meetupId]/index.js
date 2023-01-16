@@ -49,7 +49,7 @@ export async function getStaticProps(context) {
 
   const selectedMeetup = await meetupsCollection.findOne({
     _id: ObjectId(meetupId),
-  });
+  })
 
   client.close();
   return {
@@ -62,7 +62,7 @@ export async function getStaticProps(context) {
         description: selectedMeetup.description,
       },
     },
-  };
+  }
 }
 
 export default MeetupDetails;

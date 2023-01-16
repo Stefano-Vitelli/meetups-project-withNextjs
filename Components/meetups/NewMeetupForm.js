@@ -21,10 +21,10 @@ const NewMeetupForm = (props) => {
       image: enteredImage,
       address: enteredAddress,
       description: enteredDescription,
-    };
+    }
 
     props.onAddMeetup(meetupData);
-  };
+  }
 
   return (
     <Card>
